@@ -1,0 +1,148 @@
+main,
+article,
+header,
+footer,
+nav {
+    padding: 5px;
+}
+
+body {}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.kep {
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.cs {
+    border-style: inset;
+    margin-bottom: 2px;
+}
+
+.c1 {
+    padding: 2px;
+    border-style: inset;
+}
+
+main {
+    max-width: 800px;
+    display: grid;
+    margin: auto;
+    text-align: justify;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "h h h h" "n n n n" "a a a as" "f f f f";
+}
+
+h1 {
+    color: green;
+    font-size: 20px;
+    padding: 10px;
+    margin: 0;
+}
+
+h3 {
+    background-color: grey;
+    color: green;
+    font-size: 15px;
+    padding: 10px;
+    margin: 0;
+}
+
+h2 {
+    clear: both;
+    font-size: 15px;
+}
+
+.tarolo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+caption {
+    font-size: 20px;
+}
+
+header {
+    grid-area: h;
+    font-family: Tahoma, sans-serif;
+}
+
+header h1 {
+    color: green;
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+footer {
+    grid-area: f;
+    text-align: center;
+}
+
+a:hover {
+    padding-left: 15px;
+}
+
+aside {
+    padding: 10px;
+    grid-area: as;
+}
+
+article {
+    padding: 10px;
+    grid-area: a;
+    background-color: white;
+}
+
+nav {
+    grid-area: n;
+    background-color: rgb(16, 73, 16);
+}
+
+nav ul {
+    padding-left: 15px;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+}
+
+nav li a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 3px;
+    margin: 2px;
+    color: white;
+}
+
+nav li a:hover {
+    display: inline;
+    color: black;
+    background-color: white;
+    font-weight: bold;
+}
+
+footer {
+    margin: 17px
+}
+
+@media screen and (max-width:600px) {
+    main {
+        grid-template-columns: auto;
+        grid-template-areas: "h" "n" "a" "f";
+    }
+}
